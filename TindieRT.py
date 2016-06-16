@@ -23,11 +23,12 @@ class StdOutListener(tweepy.StreamListener):
         timeStamp = all_data["timestamp_ms"] #unixtime
         doTweet = all_data["id"]
         lastTime = timeStamp       
-        if username == our_own_id:
+        if username == test_id:
                 try:
-                    sleepTime = random.randrange(30, 1000, 2)  #RT at diff times
+                    sleepTime = random.randrange(30, 50, 2)  #RT at diff times
                     print(sleepTime)
                     time.sleep(sleepTime) #seconds
+                      print("Ready to RT")
                     api.retweet(doTweet)
                 except tweepy.TweepError as errorCode:
                     print(errorCode)
@@ -43,7 +44,6 @@ class StdOutListener(tweepy.StreamListener):
         
     def on_timeout(self):
         print('Timeout...')
-        time.sleep(60)
         return True # To continue listening
     
 def main():
@@ -60,4 +60,4 @@ def main():
 if __name__ == '__main__':
     main()
  
-   
+   print("I crashed here")
