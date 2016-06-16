@@ -28,7 +28,7 @@ class StdOutListener(tweepy.StreamListener):
                     sleepTime = random.randrange(30, 50, 2)  #RT at diff times
                     print(sleepTime)
                     time.sleep(sleepTime) #seconds
-                      print("Ready to RT")
+                    print("Ready to RT")
                     api.retweet(doTweet)
                 except tweepy.TweepError as errorCode:
                     print(errorCode)
