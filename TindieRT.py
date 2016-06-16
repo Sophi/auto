@@ -1,5 +1,4 @@
 import tweepy, time, sys, json, os, random
-print os.environ['HOME']
 from tweepy import OAuthHandler
 from tweepy import Stream
 from tweepy.streaming import StreamListener
