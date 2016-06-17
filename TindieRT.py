@@ -23,7 +23,7 @@ class StdOutListener(tweepy.StreamListener):
         timeStamp = all_data["timestamp_ms"] #unixtime
         doTweet = all_data["id"]
         lastTime = timeStamp       
-        if username == test_id:
+        if username == our_own_id:
                 try:
                     sleepTime = random.randrange(30, 50, 2)  #RT at diff times
                     print(sleepTime)
